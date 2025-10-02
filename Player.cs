@@ -18,14 +18,17 @@ public class Player : IFrameObject {
         if (Raylib.IsKeyDown(KeyboardKey.W)) {
             position.Y -= speed;
         }
-            if (Raylib.IsKeyDown(KeyboardKey.S)) {
-                this.position.Y += this.speed;
-            }
-            if (Raylib.IsKeyDown(KeyboardKey.A)) {
-                this.position.X -= this.speed;
-            }
-            if (Raylib.IsKeyDown(KeyboardKey.D)) {
-                this.position.X += this.speed;
-            }
+        if (Raylib.IsKeyDown(KeyboardKey.S)) {
+            this.position.Y += this.speed;
+        }
+        if (Raylib.IsKeyDown(KeyboardKey.A)) {
+            this.position.X -= this.speed;
+        }
+        if (Raylib.IsKeyDown(KeyboardKey.D)) {
+            this.position.X += this.speed;
+        }
+
+        var m = Raylib.GetMousePosition();
+        
     }
 }

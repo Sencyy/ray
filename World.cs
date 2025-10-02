@@ -14,4 +14,6 @@ public class World {
     public IFrameObject Access(ObjectID id) {
         return objects[id.Retrieve()];
     }
+
+    
 }

@@ -1,17 +1,17 @@
 public class World {
-    public List<IFrameObject> objects;
+    public List<WorldObject> objects;
 
 
     public World() {
-        objects = new List<IFrameObject>();
+        objects = new List<WorldObject>();
     }
 
-    public ObjectID AddObject(IFrameObject obj) {
+    public ObjectID AddObject(WorldObject obj) {
         objects.Add(obj);
         return new ObjectID(objects.Count() - 1);
     }
 
-    public IFrameObject Access(ObjectID id) {
+    public WorldObject Access(ObjectID id) {
         return objects[id.Retrieve()];
     }
 

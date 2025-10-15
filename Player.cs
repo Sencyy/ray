@@ -1,8 +1,7 @@
 using System.Numerics;
 using Raylib_cs;
 
-public class Player : IFrameObject {
-    public Vector2 position;
+public class Player : WorldObject {
     public Vector2 size;
     public float speed;
 
@@ -12,7 +11,7 @@ public class Player : IFrameObject {
         this.speed = speed;
     }
 
-    public void Update() {
+    public override void Update() {
         Raylib.DrawRectangleV(position, size, Color.DarkGray);
 
         if (Raylib.IsKeyDown(KeyboardKey.W)) {
@@ -31,4 +30,5 @@ public class Player : IFrameObject {
         var m = Raylib.GetMousePosition();
         
     }
+
 }
